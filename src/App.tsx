@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+// import CompanyComponent from "./components/Company";
+import { Route, Routes } from "react-router-dom";
+import ListCompanies from "./pages/ListCompanies";
+import CreateCompanies from "./pages/CreateCompanies";
+import DetailsCompany from "./pages/DetailsCompany";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<ListCompanies />}></Route>
+        <Route path="/add-company" element={<CreateCompanies />}></Route>
+        <Route path="/company/:id" element={<DetailsCompany />}></Route>
+      </Routes>
+      {/* <CompanyComponent /> */}
     </div>
   );
 }
-
-export default App;
