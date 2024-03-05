@@ -14,8 +14,7 @@ export default function ListCompanies() {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
-              apikey:
-                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6ZnV3YW5zY3VpaHVhbWJqYmN6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwOTYzMDAwMCwiZXhwIjoyMDI1MjA2MDAwfQ.mmxqvMvQZv3uNh9YoInnmpyJDsQDV_c7qLz-RKWV5wg",
+              apikey: process.env.REACT_APP_API_KEY || "",
             },
           }
         );
@@ -42,8 +41,7 @@ export default function ListCompanies() {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
-            apikey:
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6ZnV3YW5zY3VpaHVhbWJqYmN6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwOTYzMDAwMCwiZXhwIjoyMDI1MjA2MDAwfQ.mmxqvMvQZv3uNh9YoInnmpyJDsQDV_c7qLz-RKWV5wg",
+            apikey: process.env.REACT_APP_API_KEY || "",
           },
         }
       );
